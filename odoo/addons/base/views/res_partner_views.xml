@@ -379,6 +379,7 @@
                                 <group string="Sales" name="sale" priority="1">
                                     <field name="customer"/>
                                     <field name="user_id"/>
+									<field name="x_delivery_time"/>
                                 </group>
                                 <group string="Purchase" name="purchase" priority="2">
                                     <field name="supplier"/>
@@ -448,7 +449,7 @@
             <field name="arch" type="xml">
                 <search string="Search Partner">
                    <field name="name"
-                       filter_domain="['|','|',('display_name','ilike',self),('ref','=',self),('email','ilike',self)]"/>
+					   filter_domain="['|','|','|',('display_name','ilike',self),('ref','=',self),('email','ilike',self),('legal_name','ilike',self)]"/>
                    <field name="parent_id" domain="[('is_company','=',True)]" operator="child_of"/>
                    <filter name="filter_my_partners" help="My Contacts"
                            domain="[('user_id','=',uid)]"/>
