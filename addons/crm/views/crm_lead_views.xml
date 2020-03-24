@@ -603,7 +603,7 @@
                                 <group string="Marketing">
                                     <field name="campaign_id" />
                                     <field name="medium_id" />
-                                    <field name="source_id" />
+                                    <field name="source_id" attrs="{'required':True}"/>
                                 </group>
                                 <group string="Misc" name="Misc">
                                     <field name="day_open" groups="base.group_no_one"/>
