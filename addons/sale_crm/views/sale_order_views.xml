@@ -36,7 +36,7 @@
                 <group string="Marketing" name="utm_link" groups="base.group_no_one">
                     <field name="campaign_id"/>
                     <field name="medium_id"/>
-                    <field name="source_id"/>
+                    <field name="source_id" attrs="{'required':true}"/>
                 </group>
             </xpath>
             <xpath expr="//group[@name='technical']" position="inside">
